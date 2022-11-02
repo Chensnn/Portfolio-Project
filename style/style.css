@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
@@ -324,47 +325,65 @@ main div.line {
 }
 
 .back-container {
-  width: 90%;
-  height: 80%;
+  width: 70%;
   margin: auto;
 }
 .back-container section div.left-image {
   width: 90vw;
-  height: 40vh;
   background-color: #ebe4cc;
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 2rem 0rem;
-  border-top: 4px solid #d0d9d9;
+  flex-grow: 1;
+  box-shadow: 3px 3px rgba(64, 63, 61, 0.5);
 }
-.back-container section div.right-introduce {
-  width: 90vw;
-  height: 40vh;
-  background-color: #ebe4cc;
-  display: flex;
-  margin: 2rem 0rem;
-  border-top: 4px solid #d0d9d9;
-}
-.back-container section img {
+.back-container section div.left-image img {
   width: 30%;
-  height: 80%;
   margin: auto 2rem;
   border-radius: 5px;
-  box-shadow: 10px 15px rgba(64, 63, 61, 0.3);
+  padding: 1rem;
 }
-.back-container section h2 {
+.back-container section div.left-image h2 {
   align-self: center;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.1rem;
   font-weight: 300;
   font-size: 1.25rem;
-}
-.back-container section h2 a {
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
   transition: all 0.5s;
 }
-.back-container section h2 a:hover {
-  background-color: rgba(64, 52, 47, 0.8);
-  color: #fcfdfd;
-  border-radius: 20px;
+.back-container section div.left-image h2:hover {
+  border-bottom: 30px solid rgba(64, 52, 47, 0.8);
+}
+.back-container section div.left-image h2:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+  background-color: rgba(226, 157, 92, 0.5);
+  transition: width 0.7s 0.2s;
+}
+.back-container section div.left-image h2 a {
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  padding-left: 30px;
+}
+.back-container section div.left-image h2 a::before {
+  content: "► ";
+}
+
+@media screen and (max-width: 700px) {
+  .back-container section div.left-image {
+    width: 100vw;
+    justify-content: center;
+    box-shadow: 0px 5px rgba(220, 208, 185, 0.9);
+  }
+  .back-container section div.left-image img {
+    width: 350px;
+  }
+  .back-container section div.left-image h2 {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
