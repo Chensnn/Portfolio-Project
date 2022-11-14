@@ -7,9 +7,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 50px;
-        & > :first-child {
-            // margin-right: -10%;
-        }
+
         .pic {
             width: 60%;
             flex-shrink: 0;
