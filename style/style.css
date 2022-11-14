@@ -252,12 +252,8 @@ div.container section.picture img {
 }
 
 @media screen and (max-width: 900px) {
-  header nav {
-    margin-top: 30px;
-  }
   header nav ul {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -265,15 +261,14 @@ div.container section.picture img {
   header nav ul li {
     margin-top: 0;
     margin-right: 0;
-    padding: 0.5rem;
+    padding: 1.5rem 0.5rem;
+    font-size: 1rem;
   }
   header nav ul li:hover {
-    background-color: rgba(64, 52, 47, 0.7);
     border-radius: 200px;
     padding: 0.5rem 1rem;
   }
   header nav ul .active {
-    border-radius: 200px;
     padding: 0.5rem 1rem;
   }
   div.container {

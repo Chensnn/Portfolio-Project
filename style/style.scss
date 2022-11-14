@@ -282,25 +282,22 @@ div.container {
 @media screen and (max-width: 900px) {
     header {
         nav {
-            margin-top: 30px;
             ul {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 width: 100%;
                 li {
                     margin-top: 0;
                     margin-right: 0;
-                    padding: 0.5rem;
+                    padding: 1.5rem 0.5rem;
+                    font-size: 1rem;
                     &:hover {
-                        background-color: rgba($color: #40342f, $alpha: 0.7);
                         border-radius: 200px;
                         padding: 0.5rem 1rem;
                     }
                 }
                 .active {
-                    border-radius: 200px;
                     padding: 0.5rem 1rem;
                 }
             }
