@@ -105,8 +105,69 @@ main .right h1 {
   color: #687273;
 }
 
+@media screen and (max-width: 1000px) {
+  .indexMain {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .indexMain .left {
+    margin: auto;
+    margin-top: 90px;
+  }
+  .indexMain .left nav ul {
+    flex-direction: column;
+    margin-top: -50px;
+  }
+  .indexMain .left nav ul li {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  .indexMain .left nav ul li:hover {
+    background-color: rgba(64, 52, 47, 0.7);
+    border-radius: 10px;
+    padding: 0rem;
+  }
+  .indexMain .left nav ul li:hover a {
+    color: #fcfdfd;
+  }
+  .indexMain .left nav hr {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .indexMain .left h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0rem;
+  }
+  .indexMain .right {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    align-items: center;
+    top: -5%;
+  }
+  .indexMain .right img {
+    width: 150px;
+    height: 150px;
+    border: none;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0;
+    border: 5px solid rgba(253, 249, 247, 0.6);
+  }
+  .indexMain .right h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 179px;
+    letter-spacing: 0.3rem;
+  }
+}
 header nav {
   width: 100%;
+  background-color: #403f3d;
 }
 header nav ul {
   width: 100%;
@@ -127,17 +188,15 @@ header nav ul li a {
   text-decoration: none;
 }
 header nav ul li:hover {
-  background-color: rgba(64, 52, 47, 0.7);
-  border-radius: 10px 10px 10px 50px;
-  padding: 0rem 1rem 1.5rem 1rem;
+  background-color: #40342f;
+  padding: 0rem 1rem 1rem 1rem;
 }
 header nav ul li:hover a {
   color: #fcfdfd;
 }
 header nav ul .active {
-  background-color: rgba(64, 52, 47, 0.7);
-  border-radius: 10px 10px 10px 50px;
-  padding: 0rem 1rem 1.5rem 1rem;
+  border-radius: 10px;
+  padding: 0rem 1rem 1rem 1rem;
 }
 header nav ul .active a {
   color: #fcfdfd;
@@ -145,10 +204,11 @@ header nav ul .active a {
 }
 
 div.container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   letter-spacing: 0.3px;
   margin-left: 10rem;
 }
@@ -179,20 +239,22 @@ div.container section div.text p {
   text-align: justify;
   width: 90%;
 }
-div.container section div.text p:hover {
-  background-color: rgba(104, 114, 115, 0.5);
-}
 div.container section.picture {
-  margin: 0rem auto;
+  margin: 2rem auto;
   flex: 1 1 600px;
+  width: 100%;
 }
 div.container section.picture img {
   width: 25vw;
-  margin-right: 18rem;
-  box-shadow: 45px 40px #687273;
+  margin-right: 19rem;
+  border-radius: 5px;
+  box-shadow: 25px 20px #687273;
 }
 
 @media screen and (max-width: 900px) {
+  header nav {
+    margin-top: 30px;
+  }
   header nav ul {
     display: flex;
     flex-direction: column;
@@ -200,35 +262,47 @@ div.container section.picture img {
     align-items: center;
     width: 100%;
   }
+  header nav ul li {
+    margin-top: 0;
+    margin-right: 0;
+    padding: 0.5rem;
+  }
+  header nav ul li:hover {
+    background-color: rgba(64, 52, 47, 0.7);
+    border-radius: 200px;
+    padding: 0.5rem 1rem;
+  }
+  header nav ul .active {
+    border-radius: 200px;
+    padding: 0.5rem 1rem;
+  }
   div.container {
-    margin: 1rem 2rem;
+    margin: auto;
+    font-size: 1rem;
   }
   div.container section div.table {
     width: 100%;
     margin-left: 10vw;
   }
-  div.container section div.table table td {
-    padding: 0.75rem;
+  div.container section div.table table tr {
+    border-top: 2px solid #687273;
   }
-  div.container div.text {
-    position: relative;
+  div.container section div.table table tr td {
+    padding: 0.75rem;
   }
   div.container div.text p {
     margin-left: 13vw;
+    font-size: 1rem;
+    text-align: center;
   }
   div.container section.picture {
-    margin: 20rem auto;
+    position: relative;
   }
   div.container section.picture img {
-    width: 50vw;
-    height: 50vw;
-    -o-object-fit: cover;
-       object-fit: cover;
-    position: absolute;
-    top: 160vh;
-    right: -35vw;
-    box-shadow: none;
-    border-radius: 50%;
+    display: none;
+  }
+  main {
+    margin-top: 2rem;
   }
   main div.line {
     display: none;
@@ -239,18 +313,38 @@ div.container section.picture img {
   }
   main section.form form div {
     margin-left: 70%;
-    margin-top: -0.8rem;
+    margin-top: -0.5rem;
+  }
+  main section.form form div label {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
   }
   main section.form form div input[type=text],
 main section.form form div input[type=email],
 main section.form form div input[type=tel],
 main section.form form div textarea {
     width: 70vw;
+    border-radius: 5px;
+  }
+  main section.form form button {
+    border-radius: 20px;
+    padding: 0.3rem 2rem;
+    font-size: 1rem;
   }
   main section.contact {
     display: flex;
     justify-content: center;
-    margin: 2rem 0rem;
+    margin: 1rem 1rem;
+    padding: 1.3rem;
+  }
+  main section.contact div.content {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  main section.contact span {
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 main {
@@ -261,7 +355,7 @@ main {
 main section.form {
   width: 40vw;
   min-height: 70vh;
-  margin: 2rem 0rem 4rem 1.8rem;
+  margin: 2rem 0rem 2rem 2rem;
   flex: 1 1 600px;
 }
 main section.form form {
@@ -272,7 +366,7 @@ main section.form form {
   margin: 3rem 0rem;
 }
 main section.form form label {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   letter-spacing: 0.3rem;
 }
 main section.form form input {
@@ -284,10 +378,11 @@ main section.form form textarea {
   background-color: #d0d9d9;
   border: none;
   outline: transparent;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 1rem;
   caret-color: white;
   font-size: 1rem;
+  box-shadow: 5px 5px #687273;
 }
 main section.form form textarea {
   vertical-align: top;
@@ -298,7 +393,7 @@ main section.form form div {
 main section.form button {
   background-color: #d0d9d9;
   border: none;
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 0.5rem 2rem;
   font-size: 1.1rem;
   cursor: pointer;
@@ -310,6 +405,8 @@ main section.contact {
 main section.contact div.content {
   display: flex;
   flex-direction: column;
+  background-color: #d9dec2;
+  padding: 2rem;
 }
 main section.contact div.content img {
   width: 50px;
@@ -317,11 +414,12 @@ main section.contact div.content img {
 main section.contact span {
   margin-left: 4rem;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 main div.line {
-  height: 40vh;
-  border-left: 2px solid #687273;
-  margin-right: 4rem;
+  height: 39vh;
+  border-left: 20px solid #687273;
+  border-right: 5px solid #fcfdfd;
 }
 
 .back-container {
