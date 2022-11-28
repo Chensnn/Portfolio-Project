@@ -12,6 +12,16 @@ body {
     // height: 100%;
     position: relative;
     background-color: #fcfdfd;
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        background-color: rgba($color: #403f3d, $alpha: 1);
+        color: #fcfcfc;
+        letter-spacing: 0.2rem;
+        padding: 1rem 0rem;
+    }
 }
 // index.html
 
@@ -251,6 +261,9 @@ header {
         }
     }
 }
+.resumeBody {
+    overflow-x: hidden;
+}
 
 div.container {
     width: 100%;
@@ -260,6 +273,7 @@ div.container {
     font-size: 1.1rem;
     letter-spacing: 0.3px;
     margin-left: 10rem;
+
     section {
         div.table {
             flex: 3 1 600px;
@@ -294,6 +308,7 @@ div.container {
         margin: 2rem auto;
         flex: 1 1 600px;
         width: 100%;
+
         img {
             width: 25vw;
             margin-right: 19rem;
@@ -303,9 +318,17 @@ div.container {
     }
 }
 
+.forResume {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 @media screen and (max-width: 900px) {
     header {
         width: 100%;
+
         nav {
             width: 100%;
             ul {
@@ -408,17 +431,23 @@ div.container {
         section.contact {
             display: flex;
             justify-content: center;
-            margin: 1rem 1rem;
-            padding: 1.3rem;
+            margin: 1rem;
+            padding: 1rem;
 
             div.content {
                 margin-top: -30px;
                 margin-bottom: 20px;
                 border-radius: 10px;
-            }
-            span {
-                font-size: 1rem;
-                font-weight: 700;
+                width: 100%;
+                img {
+                    width: 10px;
+                }
+                span {
+                    font-size: 10px;
+                    font-weight: 500;
+                    position: relative;
+                    top: -32px;
+                }
             }
         }
     }
@@ -458,7 +487,7 @@ main {
                 padding: 1rem;
                 caret-color: white;
                 font-size: 1rem;
-                box-shadow: 5px 5px #687273;
+                // box-shadow: 5px 5px #687273;
             }
             textarea {
                 vertical-align: top;

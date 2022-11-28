@@ -3,7 +3,7 @@
   margin: auto;
   background: #a8bdbf;
   margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   border-radius: 10px;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
 }
@@ -19,6 +19,7 @@
 .wrap .item .pic img {
   vertical-align: middle;
   width: 100%;
+  border-right: 8px double #fcfcfc;
 }
 .wrap .item .txt {
   width: 40%;
@@ -66,6 +67,9 @@
   }
   section .wrap .item .pic {
     width: 100%;
+  }
+  section .wrap .item .pic img {
+    border-right: 0;
   }
   section .wrap .item .txt {
     width: 100%;
