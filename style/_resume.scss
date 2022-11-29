@@ -1,0 +1,98 @@
+.resumeBody {
+    overflow-x: hidden;
+}
+.forResume {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+div.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+    margin-left: 10rem;
+
+    section {
+        div.table {
+            flex: 3 1 600px;
+            width: 90%;
+            margin: 3rem auto;
+            table {
+                border-collapse: collapse;
+            }
+            tr {
+                border-bottom: 3px solid #687273;
+                transition: all 0.2s ease;
+                td {
+                    padding: 1rem 1rem 1rem 0rem;
+                }
+                &:hover {
+                    background-color: rgba($color: $colorText, $alpha: 0.5);
+                }
+            }
+        }
+        div.text {
+            width: 90%;
+            margin: 2rem auto;
+            transition: all 0.2s ease;
+            p {
+                text-align: justify;
+                width: 90%;
+            }
+        }
+    }
+
+    section.picture {
+        margin: 2rem auto;
+        flex: 1 1 600px;
+        width: 100%;
+
+        img {
+            width: 25vw;
+            margin-right: 19rem;
+            border-radius: 5px;
+            box-shadow: 25px 20px #687273;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    div.container {
+        margin: auto;
+        font-size: 1rem;
+        section {
+            div.table {
+                width: 100%;
+                margin-left: 10vw;
+                table {
+                    tr {
+                        border-top: 2px solid #687273;
+                        td {
+                            padding: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.text {
+            p {
+                margin-left: 13vw;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+
+        section.picture {
+            position: relative;
+            img {
+                display: none;
+            }
+        }
+    }
+}

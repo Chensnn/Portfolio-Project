@@ -1,0 +1,134 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    section.form {
+        width: 40vw;
+        min-height: 70vh;
+        margin: 2rem 0rem 2rem 2rem;
+        flex: 1 1 600px;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 0rem;
+            label {
+                font-size: 1.1rem;
+                letter-spacing: 0.3rem;
+            }
+            input {
+                height: 2rem;
+            }
+            input,
+            textarea {
+                width: 30vw;
+                background-color: #d0d9d9;
+                border: none;
+                outline: transparent;
+                border-radius: 5px;
+                padding: 1rem;
+                caret-color: white;
+                font-size: 1rem;
+                // box-shadow: 5px 5px #687273;
+            }
+            textarea {
+                vertical-align: top;
+            }
+            div {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        button {
+            background-color: #d0d9d9;
+            border: none;
+            border-radius: 10px;
+            padding: 0.5rem 2rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    }
+    section.contact {
+        flex: 1 1 600px;
+        width: 40vw;
+        div.content {
+            display: flex;
+            flex-direction: column;
+            background-color: #d9dec2;
+            padding: 2rem;
+            img {
+                width: 50px;
+            }
+        }
+        span {
+            margin-left: 4rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+    }
+    div.line {
+        height: 39vh;
+        border-left: 20px solid #687273;
+        border-right: 5px solid #fcfdfd;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        margin-top: 2rem;
+        div.line {
+            display: none;
+        }
+        section.form {
+            form {
+                width: 50vw;
+                height: 60vh;
+
+                div {
+                    label {
+                        font-size: 1rem;
+                        letter-spacing: 0.1rem;
+                    }
+
+                    margin-left: 70%;
+                    margin-top: -0.5rem;
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="tel"],
+                    textarea {
+                        width: 70vw;
+                        border-radius: 5px;
+                    }
+                }
+                button {
+                    border-radius: 20px;
+                    padding: 0.3rem 2rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+        section.contact {
+            display: flex;
+            justify-content: center;
+            margin: 1rem;
+            padding: 1rem;
+
+            div.content {
+                margin-top: -30px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                width: 100%;
+                img {
+                    width: 30px;
+                }
+                span {
+                    font-size: 13px;
+                    font-weight: 500;
+                    position: relative;
+                    top: -23px;
+                }
+            }
+        }
+    }
+}
